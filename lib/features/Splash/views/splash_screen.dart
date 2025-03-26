@@ -2,7 +2,7 @@
 
 import 'package:aspen_travel_app/core/constants/app_assets_roots.dart';
 import 'package:aspen_travel_app/file_export.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 
 import '../../../common/widgets/app_button.dart';
 
@@ -48,7 +48,7 @@ class SplashScreen extends StatelessWidget {
                   
                 ],)),
             ),
-           SizedBox(height: 24.h,),
+           SizedBox(height: 24.h),
             Center(
               child: CustomButton(
                 text: "Explore",

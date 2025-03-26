@@ -1,7 +1,7 @@
 import 'package:aspen_travel_app/file_export.dart';
 
 
-import '../../features/Splash/views/splash_screen.dart';
+import '../../features/splash/views/splash_screen.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
