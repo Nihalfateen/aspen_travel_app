@@ -1,9 +1,11 @@
-import 'package:aspen_travel_app/features/home/domain/cubit/cubit/recommended_cubit.dart';
+import 'package:aspen_travel_app/features/home/domain/cubit/recommended_cubit.dart';
 import 'package:aspen_travel_app/features/home/domain/cubit/popular_cubit.dart';
+import 'package:aspen_travel_app/features/inner_details/views/inner_details_screen.dart';
 import 'package:aspen_travel_app/file_export.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../features/home/domain/cubit/cubit/category_cubit.dart';
+import '../../features/home/domain/cubit/category_cubit.dart';
+import '../../features/home/domain/model/popular_items_model.dart';
 import '../../features/home/views/home_screen.dart';
 import '../../features/main/views/main_screen.dart';
 import '../../features/splash/views/splash_screen.dart';
@@ -57,5 +59,16 @@ class AppRouter {
                 ]),
           ],
         ),
-      ]);
+         GoRoute(
+          path: InnerDetailsScreen.route,
+          name: InnerDetailsScreen.route,
+          builder: (context, state) {
+            final popularList = state.extra as PopularItemsModel;
+            return InnerDetailsScreen(
+              popularList: popularList,
+            );
+          } 
+        ),
+      ]
+      );
 }

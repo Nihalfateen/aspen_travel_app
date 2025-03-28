@@ -1,5 +1,7 @@
+
 import 'package:aspen_travel_app/features/home/views/widgets/location_widget.dart';
 import 'package:aspen_travel_app/features/home/views/widgets/search_text_widget.dart';
+
 import 'package:aspen_travel_app/file_export.dart';
 
 import 'widgets/category_list_widget.dart';

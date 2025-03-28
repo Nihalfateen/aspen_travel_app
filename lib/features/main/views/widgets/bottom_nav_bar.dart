@@ -10,11 +10,16 @@ class HomeBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+    
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
-        color: Colors.white, // Background color
-        borderRadius: BorderRadius.circular(30), // Rounded edges
+        color: Colors.white, 
+        borderRadius:const  BorderRadius.only(
+          topLeft: Radius.circular(32),
+          topRight: Radius.circular(32),
+          bottomLeft: Radius.circular(6),
+          bottomRight: Radius.circular(6),
+        ), 
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),

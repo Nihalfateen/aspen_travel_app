@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/constants/app_assets_roots.dart';
-import '../../model/recommended_items_model.dart';
+import '../../../../core/constants/app_assets_roots.dart';
+import '../model/recommended_items_model.dart';
 
 class RecommendedCubit extends Cubit<List<RecommendedItemsModel>> {
   RecommendedCubit()

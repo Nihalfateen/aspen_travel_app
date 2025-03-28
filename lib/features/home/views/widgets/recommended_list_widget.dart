@@ -1,4 +1,4 @@
-import 'package:aspen_travel_app/features/home/domain/cubit/cubit/recommended_cubit.dart';
+import 'package:aspen_travel_app/features/home/domain/cubit/recommended_cubit.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -52,66 +52,64 @@ class RecommendedListWidget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Stack(
-                           alignment: Alignment.topRight,
-                            children: [
-                              Image.asset(
-                                recommended.image,
-                                fit: BoxFit.contain,
-                                width: 180.w,
-                                filterQuality: FilterQuality.high,
-                              ),
-                              Positioned(
-                                right: 10,
-                              top: 80,
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                        horizontal: 2.w, vertical: 2.h),
-                                    decoration: BoxDecoration(
-                                      color: AppColors.white,
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
+                        SizedBox(
+                          height: 120.h,
+                          child: Stack(
+                             alignment: Alignment.topRight,
+                              children: [
+                                Image.asset(
+                                  recommended.image,
+                                  fit: BoxFit.contain,
+                                  width: 180.w,
+                                  filterQuality: FilterQuality.high,
+                                ),
+                                Positioned(
+                                  right: 10,
+                                top: 84,
                                   child: Container(
                                     padding: EdgeInsets.symmetric(
-                                        horizontal: 4.w, vertical: 4.h),
-                                    decoration: BoxDecoration(
-                                      color: AppColors.cardColor,
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    child: Text(
-                                      recommended.rate,
-                                      textAlign: TextAlign.left,
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                      softWrap: true,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall!
-                                          .copyWith(
-                                            color: AppColors.white,
-                                            fontSize: 10.sp,
-                                              fontWeight: FontWeight.w500),
+                                          horizontal: 2.w, vertical: 2.h),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.white,
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                    child: Container(
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 4.w, vertical: 4.h),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.cardColor,
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: Text(
+                                        recommended.rate,
+                                        textAlign: TextAlign.left,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        softWrap: true,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodySmall!
+                                            .copyWith(
+                                              color: AppColors.white,
+                                              fontSize: 10.sp,
+                                                fontWeight: FontWeight.w500),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ]),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(
-                              left: 8.w, right: 8.w, top: 8.h, bottom: 8.h),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                recommended.name,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall!
-                                    .copyWith(
-                                        color: AppColors.black,
-                                        fontWeight: FontWeight.w500),
-                              ),
-                            ],
+                              left: 8.w, right: 8.w, ),
+                          child: Text(
+                            recommended.name,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall!
+                                .copyWith(
+                                    color: AppColors.black,
+                                    fontWeight: FontWeight.w500),
                           ),
                         ),
                       ],

@@ -6,7 +6,7 @@ class AppThemes {
     brightness: Brightness.light,
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: AppColors.white,
-    cardColor: AppColors.geryColor2,
+    cardColor: AppColors.cardColor,
     fontFamily: 'Montserrat', 
     textTheme: textTheme,
   );

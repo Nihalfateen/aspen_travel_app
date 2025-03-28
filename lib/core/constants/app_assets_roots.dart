@@ -15,4 +15,9 @@ class AppImages {
   static String coeurdesAlpesImage = "${imagesPath}allpes_image.png";
   static String exploreAspenImage = "${imagesPath}explore _Aspen_image.png";
   static String luxuriousAspenImage = "${imagesPath}luxurious_Aspen_image.png";
+  static String rateImage = "${imagesPath}rate.svg";
+  static String foodIconSVG = "${imagesPath}food_icon.svg";
+  static String poolIconSVG = "${imagesPath}pool_icon.svg";
+  static String bathTubIconSVG = "${imagesPath}bath _tub_icon.svg";
+   static String wifiIconSVG = "${imagesPath}wifi.svg";
 }
