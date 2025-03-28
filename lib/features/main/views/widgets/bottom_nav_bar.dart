@@ -1,5 +1,5 @@
+import 'package:aspen_travel_app/core/constants/app_dimensions.dart';
 import 'package:aspen_travel_app/file_export.dart';
-
 
 class HomeBottomNavBar extends StatelessWidget {
   final int index;
@@ -10,19 +10,18 @@ class HomeBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.symmetric(vertical: AppDimensions.margin_10.h),
       decoration: BoxDecoration(
-        color: Colors.white, 
-        borderRadius:const  BorderRadius.only(
-          topLeft: Radius.circular(32),
-          topRight: Radius.circular(32),
-          bottomLeft: Radius.circular(6),
-          bottomRight: Radius.circular(6),
-        ), 
+        color: AppColors.white,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(AppDimensions.margin_32),
+          topRight: Radius.circular(AppDimensions.margin_32),
+          bottomLeft: Radius.circular(AppDimensions.margin_6),
+          bottomRight: Radius.circular(AppDimensions.margin_6),
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, 5),
           ),
@@ -78,12 +77,14 @@ class HomeBottomNavBar extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SizedBox(height: 8),
+          SizedBox(height: AppDimensions.margin_8.h),
           SvgPicture.asset(
             icon,
-            height: selected ? 28 : 24,
+            height: selected
+                ? AppDimensions.margin_28.h
+                : AppDimensions.margin_24.h,
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: AppDimensions.margin_8.h),
         ],
       ),
     );

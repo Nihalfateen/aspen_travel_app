@@ -1,3 +1,5 @@
+import 'package:aspen_travel_app/core/constants/app_dimensions.dart';
+
 import '../../../../file_export.dart';
 
 class FacilityWidget extends StatelessWidget {
@@ -6,17 +8,19 @@ class FacilityWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-       height: 74.h,
-              width: 77.w,
-              padding: EdgeInsets.symmetric(horizontal: 15.w,vertical:8.h),
-              decoration: BoxDecoration(
-                color: Colors.blueGrey.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(8),
-              ),
+      height: 74.h,
+      width: 77.w,
+      padding: EdgeInsets.symmetric(
+          horizontal: AppDimensions.margin_16.w,
+          vertical: AppDimensions.margin_8.h),
+      decoration: BoxDecoration(
+        color: Colors.blueGrey.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(AppDimensions.margin_8),
+      ),
       child: Column(
         children: [
           SvgPicture.asset(image),
-         const SizedBox(height: 4),
+          SizedBox(height: AppDimensions.margin_4.h),
           Text(
             name,
             style: Theme.of(context).textTheme.bodySmall!.copyWith(

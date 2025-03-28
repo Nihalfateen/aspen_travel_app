@@ -1,7 +1,6 @@
-
+import 'package:aspen_travel_app/core/constants/app_dimensions.dart';
 import 'package:aspen_travel_app/features/home/views/widgets/location_widget.dart';
 import 'package:aspen_travel_app/features/home/views/widgets/search_text_widget.dart';
-
 import 'package:aspen_travel_app/file_export.dart';
 
 import 'widgets/category_list_widget.dart';
@@ -16,28 +15,32 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.white,
       body: Padding(
-        padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 44.h),
+        padding: EdgeInsets.only(
+          left: AppDimensions.margin_20.w,
+          right: AppDimensions.margin_20.w,
+          top: 44.h,
+        ),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const LocationWidget(),
               SizedBox(
-                height: 24.h,
+                height: AppDimensions.margin_24.h,
               ),
-              SearchBarWidget(
-                hintText: "Find things to do",
+              const SearchBarWidget(
+                hintText: AppStrings.findThingsToDo,
               ),
               SizedBox(
-                height: 32.h,
+                height: AppDimensions.margin_32.h,
               ),
               const CategoryListWidget(),
               SizedBox(
-                height: 32.h,
+                height: AppDimensions.margin_32.h,
               ),
               const PopularListWidget(),
               SizedBox(
-                height: 32.h,
+                height: AppDimensions.margin_32.h,
               ),
               const RecommendedListWidget()
             ],

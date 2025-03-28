@@ -1,4 +1,4 @@
-enum Categoryenum {
+enum CategoryEnum {
   location,
   hotels,
   food,

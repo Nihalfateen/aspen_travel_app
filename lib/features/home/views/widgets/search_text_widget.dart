@@ -1,28 +1,47 @@
+import 'package:aspen_travel_app/core/constants/app_dimensions.dart';
 import 'package:aspen_travel_app/file_export.dart';
 
-class SearchBarWidget extends StatelessWidget {
+class SearchBarWidget extends StatefulWidget {
   final String? hintText;
   final ValueChanged<String>? onChanged;
-  TextEditingController searchController = TextEditingController();
-  SearchBarWidget({super.key, this.hintText, this.onChanged});
+
+  const SearchBarWidget({super.key, this.hintText, this.onChanged});
+
+  @override
+  State<SearchBarWidget> createState() => _SearchBarWidgetState();
+}
+
+class _SearchBarWidgetState extends State<SearchBarWidget> {
+  late TextEditingController searchController;
+  @override
+  void initState() {
+    searchController = TextEditingController();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: ScreenUtil().screenHeight * 0.07,
       decoration: BoxDecoration(
-        color: Colors.blueGrey.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(30),
+        color: Colors.blueGrey.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(AppDimensions.margin_30),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+      padding: EdgeInsets.symmetric(
+        horizontal: AppDimensions.margin_10.w,
+        vertical: AppDimensions.margin_12.h,
+      ),
       child: TextField(
         controller: searchController,
-        onChanged: onChanged,
+        onChanged: widget.onChanged,
         decoration: InputDecoration(
-          hintText: hintText,
+          hintText: widget.hintText,
           border: InputBorder.none,
-          prefixIcon: SvgPicture.asset(
-            AppImages.searchIcon,
+          prefixIcon: Transform.scale(
+            scale: .6,
+            child: SvgPicture.asset(
+              AppImages.searchIcon,
+            ),
           ),
           hintStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
                 color: AppColors.hintTextColor,
@@ -31,5 +50,11 @@ class SearchBarWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
   }
 }
