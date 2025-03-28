@@ -32,11 +32,13 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
         vertical: AppDimensions.margin_12.h,
       ),
       child: TextField(
+        readOnly: true,
         controller: searchController,
         onChanged: widget.onChanged,
         decoration: InputDecoration(
           hintText: widget.hintText,
           border: InputBorder.none,
+          
           prefixIcon: Transform.scale(
             scale: .6,
             child: SvgPicture.asset(
