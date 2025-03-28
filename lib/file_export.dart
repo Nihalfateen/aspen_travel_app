@@ -5,3 +5,5 @@ export 'package:aspen_travel_app/core/constants/app_colors.dart';
 export 'package:aspen_travel_app/core/constants/app_strings.dart';
 export 'package:aspen_travel_app/core/config/app_route.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
+export 'package:aspen_travel_app/core/constants/app_assets_roots.dart';
+export 'package:flutter_svg/svg.dart';

@@ -5,10 +5,9 @@ import 'package:aspen_travel_app/file_export.dart';
 void main() async {
  
   WidgetsFlutterBinding.ensureInitialized();
-  
+  await ScreenUtil.ensureScreenSize();
   runApp(
-   const MyApp(),
-    
+    const MyApp(),
   );
 }
 

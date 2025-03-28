@@ -29,7 +29,12 @@ class AppThemes {
     ),
      titleSmall: TextStyle(
       fontFamily: 'Montserrat', 
-      fontSize: 16.sp,
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+    ),
+    bodySmall: TextStyle(
+      fontFamily: 'Montserrat', 
+      fontSize: 14.sp,
       fontWeight: FontWeight.w700,
     ),
   );

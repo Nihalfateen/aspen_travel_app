@@ -38,8 +38,8 @@ dependencies:
 
     ##CORE##
   go_router: ^14.8.1
-  bloc: ^9.0.0
-  flutter_bloc: ^9.1.0
+  
+  flutter_bloc: 
 
    ##UI##
   flutter_screenutil: ^5.9.3

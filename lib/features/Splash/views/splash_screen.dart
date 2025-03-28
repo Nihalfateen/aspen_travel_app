@@ -1,10 +1,9 @@
 
-
-import 'package:aspen_travel_app/core/constants/app_assets_roots.dart';
 import 'package:aspen_travel_app/file_export.dart';
 
 
 import '../../../common/widgets/app_button.dart';
+import '../../home/views/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -27,7 +26,7 @@ class SplashScreen extends StatelessWidget {
             ),
             
             Padding(
-              padding:  EdgeInsets.only(left:43.w,right: 32.w,top:334.h ),
+              padding:  EdgeInsets.only(left:43.w,right: 32.w,top:320.h ),
               child: RichText(
                 softWrap: true,
               text: TextSpan(
@@ -55,7 +54,7 @@ class SplashScreen extends StatelessWidget {
                 width: 311.w,
                 height: 52.h,
                 onPressed: () {
-                  // Add your navigation or action logic here
+                 GoRouter.of(context).go(HomeScreen.route);
                 },
                 gradient: const LinearGradient(colors: [AppColors.bluePrimaryColor,AppColors.blueSecondaryColor]),
               ),
