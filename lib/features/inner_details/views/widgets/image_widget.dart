@@ -56,7 +56,7 @@ class ImageWidget extends StatelessWidget {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.white70.withValues(alpha: .1),
+                          color: Colors.white70.withOpacity( .1),
                           blurRadius: 4,
                           spreadRadius: 1,
                           offset: const Offset(0, 2),

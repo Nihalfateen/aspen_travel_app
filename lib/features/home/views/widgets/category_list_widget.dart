@@ -28,7 +28,7 @@ class CategoryListWidget extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 color: categoryCubit.state == CategoryEnum.values[index]
-                    ? Colors.blue.withValues(alpha: 0.1)
+                    ? Colors.blue.withOpacity( 0.1)
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(AppDimensions.margin_20),
               ),

@@ -24,7 +24,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
     return Container(
       height: ScreenUtil().screenHeight * 0.07,
       decoration: BoxDecoration(
-        color: Colors.blueGrey.withValues(alpha: 0.1),
+        color: Colors.blueGrey.withOpacity( 0.1),
         borderRadius: BorderRadius.circular(AppDimensions.margin_30),
       ),
       padding: EdgeInsets.symmetric(

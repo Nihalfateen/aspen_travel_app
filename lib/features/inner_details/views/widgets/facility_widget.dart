@@ -14,7 +14,7 @@ class FacilityWidget extends StatelessWidget {
           horizontal: AppDimensions.margin_16.w,
           vertical: AppDimensions.margin_8.h),
       decoration: BoxDecoration(
-        color: Colors.blueGrey.withValues(alpha: 0.1),
+        color: Colors.blueGrey.withOpacity( 0.1),
         borderRadius: BorderRadius.circular(AppDimensions.margin_8),
       ),
       child: Column(
